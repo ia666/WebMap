@@ -8,7 +8,7 @@
 #   $ git clone https://github.com/SabyasachiRana/WebMap.git
 #   $ cd WebMap/docker
 #   $ docker build -t webmap:latest .
-#   $ docker run -d -v /opt/WebMap/docker/xml:/opt/xml -p 8000:8000 webmap:latest
+#   $ docker run -d -v /opt/WebMap/docker/xml:/opt/xml:z -p 8000:8000 webmap:latest
 #
 # Nmap Example:
 #   $ nmap -sT -A -oX /tmp/myscan.xml 192.168.1.0/24

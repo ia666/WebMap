@@ -238,10 +238,6 @@
 				<li><i class="fas fa-exclamation-triangle"></i> <a onclick="javascript:$('html, body').animate({ scrollTop: ($('#{{ i }}').offset().top - 60) }, 1000);" href="#!">{{ i }}</a></li>
 			{% endfor %}
 		{% endif %}
-		<li class="wm_line"><div>social</div></li>
-		<li><i class="fab fa-github" style="font-size:20px;"></i> <a href="">GitHub Project</a></li>
-		<li><i class="fas fa-star"></i> <a href="#!" id="githubstar">1</a></li>
-		<li><i class="fas fa-code-branch"></i> <a href="#!" id="githubfork">1</a></li>
 	</ul>
 </div>
 {% endif %}
@@ -255,12 +251,6 @@
 	</div></li>
 	<li><a href="/setscanfile/unset"><i class="material-icons">track_changes</i>Show all Nmap scan</a></li>
 	<li><a href="/"><i class="material-icons">settings_input_antenna</i>Show scan details</a></li>
-
-	<li><div class="divider"></div></li>
-	<li><a class="subheader">Support WebMap on GitHub</a></li>
-	<li style="padding-left:30px;margin-top:-20px;"><a class="github-button" href="https://github.com/Rev3rseSecurity" data-size="large" data-show-count="true" aria-label="Follow @Rev3rseSecurity on GitHub">Follow @Rev3rseSecurity</a></li>
-	<li style="padding-left:30px;margin-top:-20px;"><a class="github-button" href="https://github.com/Rev3rseSecurity/WebMap" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Rev3rseSecurity/WebMap on GitHub">Star WebMap</a></li>
-	<li style="padding-left:30px;margin-top:-20px;"><a class="github-button" href="https://github.com/Rev3rseSecurity/WebMap/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Rev3rseSecurity/WebMap on GitHub">Fork WebMap</a></li>
 </ul>
 {% endif %}
 

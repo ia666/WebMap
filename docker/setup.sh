@@ -1,3 +1,4 @@
+#!/bin/bash
 echo ""
 echo " __          __  _     __  __             "
 echo " \ \        / / | |   |  \/  |            "
@@ -9,21 +10,28 @@ echo "                                   | |    "
 echo "                                   |_|    "
 echo ""
 echo -e "\n[+] Starting WebMap docker setup"
+
 echo "[+] Creating required dirs"
 mkdir /tmp/webmap 2> /dev/null
+
 echo "[+] Pull WebMap from docker hub"
-docker pull rev3rse/webmap
+docker pull reborntc/webmap
+
 echo "[+] Remove old WebMap container"
 docker stop webmap 2> /dev/null
 docker rm webmap 2> /dev/null
+
 echo "[+] Run WebMap container"
-docker run -d --name webmap -h webmap -p 8000:8000 -v /tmp/webmap:/opt/xml rev3rse/webmap
+docker run -d --name webmap -h webmap -p 8000:8000 -v /tmp/webmap:/opt/xml:z reborntc/webmap
+
 echo "[+] Configure TimeZone for container"
 docker exec -ti webmap bash /root/tzdata.sh
+
 echo "[+] Restart container"
 docker restart webmap
+
 echo "[+] Done"
 echo -e "\nNow you can point your browser to http://localhost:8000"
 echo "!! DO NOT EXPOSE WebMap TO THE INTERNET, BE SMART !!"
 echo "Please, take few seconds to support this project on GitHub"
-echo -e "https://github.com/Rev3rseSecurity/WebMap\n"
+echo -e "https://github.com/SabyasachiRana/WebMap\n"
